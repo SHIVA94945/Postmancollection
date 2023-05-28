@@ -1,0 +1,682 @@
+{
+	"info": {
+		"_postman_id": "8d18a15a-e47c-4a20-9bdf-238fb00aa8de",
+		"name": "5.2.2 Infosec validaition apis",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22307028"
+	},
+	"item": [
+		{
+			"name": "dev v6/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device_id\": \"556366c3113a15c3\",\r\n    \"mno\": \"9000264416\",\r\n    \"passcode\": 123456,\r\n    \"type\": \"0\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v6/login",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v6",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dev v6/token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"mno\": \"9000264416\",\r\n    \"passcode\": \"123456\",\r\n    \"type\": \"0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:4080/jhsmobileapi/mobile/mobilecustomer/v6/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4080",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v6",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v6/updatecargotrip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"source\": {\r\n        \"lat\": 19.075963,\r\n        \"lon\": 72.877641,\r\n        \"addr\": \"Mumbai, Maharashtra, India\",\r\n        \"state\": \"Ram Tonde\",\r\n        \"landmark\": \"\",\r\n        \"city\": \"\",\r\n        \"pincode\": \"\",\r\n        \"code\": \"\",\r\n        \"name\": \"\",\r\n        \"display_name\": \"\",\r\n        \"mno\": \"\",\r\n        \"email\": \"\",\r\n        \"materials\": [],\r\n        \"invoices\": []\r\n    },\r\n    \"customer\": {\r\n        \"name\": \"Dinesh\",\r\n        \"mno\": \"\",\r\n        \"email\": \"\",\r\n        \"addr\": \"4WC8+6Q Mumbai, Maharashtra, India\",\r\n        \"lat\": \"19.12052\",\r\n        \"lon\": \"72.91695\",\r\n        \"state\": \"Maharashtra\",\r\n        \"orgname\": \"Hetal pvt \",\r\n        \"locname\": \"HydraMumbai\",\r\n        \"orgid\": \"3e8f3d81-6d4b-11ec-a592-e0d55e89f0bd\"\r\n    },\r\n    \"consignor\": {\r\n        \"name\": \"harish\",\r\n        \"mno\": \"9519517535\",\r\n        \"email\": \"rawalhar91@gmail.com\",\r\n        \"addr\": \"Mumbai, Maharashtra, India\",\r\n        \"lat\": \"19.0759837\",\r\n        \"lon\": \"72.8776559\",\r\n        \"state\": \"Ram Tonde\",\r\n        \"orgname\": \"test rawal\",\r\n        \"locname\": \"Mumbai rawal\",\r\n        \"orgid\": \"892349ab-6873-11ec-89c0-e0d55e89f0bd\",\r\n        \"city\": \"\",\r\n        \"pincode\": \"\",\r\n        \"code\": \"\",\r\n        \"display_name\": \"\",\r\n        \"lookupid\": \"\",\r\n        \"lookuptype\": \"\",\r\n        \"det_radius\": \"\",\r\n        \"speedlimit\": \"\"\r\n    },\r\n    \"consignee\": {\r\n        \"name\": \"Dinesh\",\r\n        \"mno\": \"\",\r\n        \"email\": \"\",\r\n        \"addr\": \"4WC8+6Q Mumbai, Maharashtra, India\",\r\n        \"lat\": \"19.12052\",\r\n        \"lon\": \"72.91695\",\r\n        \"state\": \"Maharashtra\",\r\n        \"orgname\": \"Hetal pvt \",\r\n        \"locname\": \"HydraMumbai\",\r\n        \"orgid\": \"3e8f3d81-6d4b-11ec-a592-e0d55e89f0bd \",\r\n        \"city\": \"\",\r\n        \"pincode\": \"\",\r\n        \"code\": \"\",\r\n        \"display_name\": \"\",\r\n        \"lookupid\": \"\",\r\n        \"lookuptype\": \"\",\r\n        \"det_radius\": \"\",\r\n        \"speedlimit\": \"\"\r\n    },\r\n    \"destination\": {\r\n        \"lat\": 19.1206237,\r\n        \"lon\": 72.91682879999999,\r\n        \"addr\": \"4WC8+6Q Navi-Mumbai, Maharashtra, India\",\r\n        \"state\": \"Maharashtra\",\r\n        \"landmark\": \"\",\r\n        \"city\": \"\",\r\n        \"pincode\": \"\",\r\n        \"code\": \"\",\r\n        \"name\": \"\",\r\n        \"display_name\": \"\",\r\n        \"mno\": \"\",\r\n        \"email\": \"\",\r\n        \"materials\": [],\r\n        \"invoices\": [],\r\n        \"eta_ts\": \"\",\r\n        \"EWB\": []\r\n    },\r\n    \"organization\": {\r\n        \"name\": \"Hetal pvt \",\r\n        \"mno\": \"\",\r\n        \"email\": \"\"\r\n    },\r\n    \"contyp\": 1,\r\n    \"radius\": \"500\",\r\n    \"type\": \"03\",\r\n    \"clientid\": \"11\",\r\n    \"routeid\": \"\",\r\n    \"enterprisename\": \"RCP\",\r\n    \"simtrackingstatus\": 2,\r\n    \"simtracktype\": \"N\",\r\n    \"pickupdate\": 1656393343000,\r\n    \"expectedETA\": {\r\n        \"text\": \"3 days 32 minutes \",\r\n        \"value\": 261125.808\r\n    },\r\n    \"estimatedDistance\": 454,\r\n    \"stopsduration\": {\r\n        \"day\": 0,\r\n        \"hours\": 3600,\r\n        \"minutes\": 300\r\n    },\r\n    \"getdriverconsent\": \"False\",\r\n    \"totalpayble\": 0,\r\n    \"cost\": {\r\n        \"perunitrate\": \"\",\r\n        \"totalunits\": \"\"\r\n    },\r\n    \"billingtype\": \"fixed\",\r\n    \"readingkm\": {\r\n        \"start\": 0,\r\n        \"end\": 0,\r\n        \"distance\": 0\r\n    },\r\n    \"vehicle\": {\r\n        \"tagname\": \"Netradyne02\",\r\n        \"regno\": \"GJ06BT0708\",\r\n        \"pdid\": \"4da17aeda546454ba521eecef589711c\",\r\n        \"type\": \"\",\r\n        \"model\": \"\"\r\n    },\r\n    \"toteta\": \"3 days 32 minutes \",\r\n    \"buffeta\": \"\",\r\n    \"availableVehSts\": false,\r\n    \"driver\": {\r\n        \"name\": \"Veerendra\",\r\n        \"mno\": \"9492383111\",\r\n        \"imei\": \"911615400245257\",\r\n        \"regno\": \"GJ06BT0708\",\r\n        \"dlno\": \"\"\r\n    },\r\n    \"etakms\": \"1732.957 KM\",\r\n    \"totaletasec\": 115040,\r\n    \"etatime\": \"1 day 6 hours 52 minutes \",\r\n    \"userid\": \"460b71b6-308a-11eb-978c-005056af269b\",\r\n    \"adminid\": \"ranjit@assettl.com\",\r\n    \"etafare\": 0,\r\n    \"tripduration\": \"5.2\",\r\n    \"materialInfo\": {\r\n        \"name\": \"Goods Type\",\r\n        \"mtype\": \"\",\r\n        \"mcode\": \"\",\r\n        \"skucode\": \"\",\r\n        \"hsncode\": \"\",\r\n        \"desc\": \"\",\r\n        \"mtid\": \"\"\r\n    },\r\n    \"capacityid\": \"1\",\r\n    \"trucktypeid\": \"21\",\r\n    \"capacity\": \"0-5\",\r\n    \"trucktype\": \"Truck\",\r\n    \"touchpointradius\": 300,\r\n    \"touchpoints\": [\r\n        {\r\n            \"loc\": {\r\n                \"lon\": \"78.\",\r\n                \"lat\": \"17.439939\",\r\n                \"addr\": \"C2Q2+X2 Madireddipalle, Telangana, India\",\r\n                \"landmark\": \"\",\r\n                \"state\": \"Telangana\",\r\n                \"city\": \"\",\r\n                \"pincode\": \"\"\r\n            },\r\n            \"consignee\": {\r\n                \"name\": \"Ram\",\r\n                \"mno\": \"\",\r\n                \"email\": \"\",\r\n                \"lat\": \"17.73413\",\r\n                \"lon\": \"78.292\",\r\n                \"addr\": \"narsapur\",\r\n                \"custid\": 2686,\r\n                \"state\": \"Telangana\",\r\n                \"orgname\": \"TEST1\",\r\n                \"locname\": \"narsapur\",\r\n                \"orgid\": \"ef22cba7-8a53-11ec-bbf7-e0d55e89f0bd\",\r\n                \"tchptsearchtext\": \"TEST1(Ram)-narsapur\",\r\n                \"city\": \"\",\r\n                \"pincode\": \"\",\r\n                \"code\": \"\",\r\n                \"display_name\": \"\",\r\n                \"lookupid\": \"uniqueid\",\r\n                \"lookuptype\": \"consignee/location\",\r\n                \"det_radius\": \"\",\r\n                \"speedlimit\": \"\"\r\n            },\r\n            \"materialInfo\": {\r\n                \"name\": \"Goods Type\",\r\n                \"mtype\": \"\",\r\n                \"mcode\": \"\",\r\n                \"skucode\": \"\",\r\n                \"hsncode\": \"\",\r\n                \"desc\": \"\",\r\n                \"mtid\": \"\"\r\n            },\r\n            \"materials\": [],\r\n            \"invoices\": [],\r\n            \"eta\": \"1 day 4 hours 47 minutes \",\r\n            \"buffertime\": {\r\n                \"day\": \"\",\r\n                \"hour\": \"3600\",\r\n                \"min\": \"180\"\r\n            },\r\n            \"index\": 0,\r\n            \"distance\": 127846\r\n        }\r\n    ],\r\n    \"tripinfo\": {\r\n        \"invoiceNos\": [],\r\n        \"shipmentNos\": [],\r\n        \"lorryrecieptNos\": [],\r\n        \"docs\": []\r\n    },\r\n    \"waypoints\": [],\r\n    \"direction_points\": [\r\n        {\r\n            \"lat\": 16.681890000000003,\r\n            \"lng\": 77.86210000000001\r\n        },\r\n        {\r\n            \"lat\": 16.68531,\r\n            \"lng\": 77.86474000000001\r\n        }\r\n    ],\r\n    \"tripassigntype\": 1,\r\n    \"additionaldrivers\": [],\r\n    \"comments\": \"\",\r\n    \"returntrip\": true,\r\n    \"tripmodel\": \"Forward\",\r\n    \"isTripRecurring\": false,\r\n    \"tripRecurringType\": \"\",\r\n    \"scheduletype\": 1,\r\n    \"vehicleSource\": 1,\r\n    \"destETA\": \"1 day 10 hours 2 minutes \",\r\n    \"destDist\": 838236,\r\n    \"bookingid\": \"20230106162202445\",\r\n    \"bookingsts\": \"51\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v6/updatecargotrip",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v6",
+						"updatecargotrip"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v2/updatecargotripstatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cancelby\": \"Ranjith Reddy\",\r\n    \"reason\": \"no goods available \",\r\n    \"tripid\": \"20230208131121563\",\r\n    \"tripstatus\": \"58\",\r\n    \"clientid\": 11,\r\n    \"enterprise_code\": 1007,\r\n    \"mno\": \"9000264416\",\r\n    \"driverIMEI\": \"866459037891166\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v2/updatecargotripstatus",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v2",
+						"updatecargotripstatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v5/getbookingdetailsbyid",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\": \"20230208131121563\",\r\n    \"enterprise_code\": 1007,\r\n    \"clientid\": 11,\r\n    \"mno\": \"9000264416\" \r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v5/getbookingdetailsbyid",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v5",
+						"getbookingdetailsbyid"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/return-trip-status-update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\":\"20220222164711487\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/return-trip-status-update",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"return-trip-status-update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/get_relevantTripdata",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\": \"20220731222533602\",\r\n    \"bookingref\": \"20220731222406569\",\r\n    \"tripmodel\": \"Return\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/get_relevantTripdata",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"get_relevantTripdata"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/getEpodDocs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\": \"20230208131121563\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/getEpodDocs",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"getEpodDocs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/insertEpodDoc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\": \"20220208100251476\",\r\n    \"adminid\": \"ranjit@assettl.com\",\r\n    \"createdby\": \"ranjit@assettl.com\",\r\n    \"createdts\": 1644321932598,\r\n    \"epod\": [\r\n        {\r\n            \"loctype\": 1,\r\n            \"tch_id\": \"\",\r\n            \"docs\": [\r\n                {\r\n                    \"fname\": \"download.jpg\",\r\n                    \"fsize\": 5531,\r\n                    \"ftype\": \".jpg\",\r\n                    \"fpath\": \"cd0ff6e41c1739d5636bcfada3184b3b.jpg\",\r\n                    \"comm\": \"\",\r\n                    \"fsts\": 0,\r\n                    \"autoaprv\": 0,\r\n                    \"utype\": \"0\",\r\n                    \"updby\": \"ranjit@assettl.com\",\r\n                    \"driver\": {\r\n                        \"mno\": \"7867664123\",\r\n                        \"name\": \"Hetal\"\r\n                    },\r\n                    \"aprv\": {\r\n                        \"name\": \"\"\r\n                    },\r\n                    \"rjct\": {\r\n                        \"name\": \"\"\r\n                    },\r\n                    \"updts\": 1644321932598\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/insertEpodDoc",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"insertEpodDoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/removeEpodDoc",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"bookingid\": \"20220118184521370\",\r\n    \"docID\": \"61e79fb3ea85a702efe0a0d2\",\r\n    \"loctype\": 1,\r\n    \"tch_id\": \"\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/removeEpodDoc",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"removeEpodDoc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v1/actionOnEpodDocs",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"bookingid\": \"20220318161449772\",\r\n  \"docID\": \"6234704780834446e8873dcd\",\r\n  \"fsts\": 2,\r\n  \"aprv\": {\r\n    \"name\": \"\",\r\n    \"ts\": \"\"\r\n  },\r\n  \"rjct\": {\r\n    \"name\": \"rambabu@assettl.com\",\r\n    \"ts\": \"1647603827332\"\r\n  },\r\n  \"tch_id\": \"\",\r\n  \"comm\": \"\",\r\n  \"driverMno\": \"9949996046\",\r\n  \"vehicle\": \"RP09AT2323\",\r\n  \"source\": \"M.V.P Colony, Sector No.1, HIG 31, Opposite Pullocks Kinder Garden School Near to Vuda Kalyanamadapam, Tennis Court, Dondaparthy, Gajuwaka, Visakhapatnam, Andhra Pradesh 530017, India\",\r\n  \"destination\": \"401, Main Rd, near Gokul Chat, Hashmath Gunj, Subhash Nagar, Badi Chowdi, Punjagutta, Hyderabad, Telangana 500082, India\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v1/actionOnEpodDocs",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v1",
+						"actionOnEpodDocs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "shareTripLink",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"uid\": \"ranjit@assettl.com\",\r\n    \"emailid\": [\r\n        \"rambabu@assettl.com\"\r\n    ],\r\n    \"mobileno\": [\r\n        \"9889897789\"\r\n    ],\r\n    \"bkey\": \"rms\",\r\n    \"cts\": \"1674120540000\",\r\n    \"tid\": \"20230119102209966\",\r\n    \"url\": \"http://rms.assettl.com\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/shareTripLink",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"shareTripLink"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v10/getcargotrips",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTMzMDEsImV4cCI6MTY3NjMxMjUwMX0.QWYXhsTGFnSxy_E9vSLOtHr_zclShpRBvluw5EyoLFw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "460b71b6-308a-11eb-978c-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_date\": \"2023-02-10 11:59:59 PM\",\r\n    \"from_date\": \"2023-02-08 12:00:00 AM\",\r\n    \"trip_type\": 54,\r\n    \"mno\": \"9000264416\",\r\n    \"userid\": \"460b71b6-308a-11eb-978c-005056af269b\",\r\n    \"adminid\": \"ranjit@assettl.com\",\r\n    \"enterprise_code\": 1007,\r\n    \"clientid\": 11,\r\n    \"tripselecttype\": [\r\n        \"GPS\",\r\n        \"SIM\"\r\n    ],\r\n    \"isSelected\": [\r\n        \"Ontime\",\r\n        \"Delay\"\r\n    ],\r\n    \"regno\": \"\",\r\n    \"vehicle_trip\": \"0\",\r\n    \"contype\": [\r\n        0,\r\n        1\r\n    ],\r\n    \"pageNo\": 1,\r\n    \"size\": 50,\r\n    \"searchText\": \"\",\r\n    \"userType\": \"2\",\r\n    \"userEntity\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v10/getcargotrips",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v10",
+						"getcargotrips"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v5/getcargodrivertripsbystatus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTU2MTIsImV4cCI6MTY3NjMxNDgxMn0.oMCGtDIB8CrwUDmfwrlAPPjljp2Umh-KTEpYUYEzb-M",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "5a714f13-f07a-11eb-8b00-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to_date\": \"2023-02-10 11:59:59 PM\",\r\n    \"from_date\": \"2023-02-08 12:00:00 AM\",\r\n    \"trip_type\": \"57\",\r\n    \"mno\": \"9864346164\",\r\n    \"enterprise_code\": 1007,\r\n    \"clientid\": 11,\r\n    \"userid\": \"5a714f13-f07a-11eb-8b00-005056af269b\",\r\n    \"adminid\": \"ranjit@assettl.com\",\r\n    \"isSelected\": [\r\n        \"Ontime\",\r\n        \"Delay\"\r\n    ],\r\n    \"pageNo\": 1,\r\n    \"size\": \"10\",\r\n    \"searchText\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v5/getcargodrivertripsbystatus",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v5",
+						"getcargodrivertripsbystatus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "v4/currentcargodrivertrip",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2NzYwNTU2MTIsImV4cCI6MTY3NjMxNDgxMn0.oMCGtDIB8CrwUDmfwrlAPPjljp2Umh-KTEpYUYEzb-M",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "tokenuserid",
+						"value": "5a714f13-f07a-11eb-8b00-005056af269b",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clientid\": 11,\r\n    \"enterprise_code\": 1007,\r\n    \"mno\": \"9864346164\"\r\n}"
+				},
+				"url": {
+					"raw": "http://183.82.2.55:8090/jhsmobileapi/mobile/mobilecustomer/v4/currentcargodrivertrip",
+					"protocol": "http",
+					"host": [
+						"183",
+						"82",
+						"2",
+						"55"
+					],
+					"port": "8090",
+					"path": [
+						"jhsmobileapi",
+						"mobile",
+						"mobilecustomer",
+						"v4",
+						"currentcargodrivertrip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
